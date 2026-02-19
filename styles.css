@@ -205,6 +205,10 @@ main,
     linear-gradient(135deg, rgba(19, 117, 107, 0.2), rgba(239, 125, 50, 0.2)),
     repeating-linear-gradient(90deg, #fff 0, #fff 34px, #f6eee2 34px, #f6eee2 68px);
   position: relative;
+  padding: 16px;
+  display: grid;
+  align-content: end;
+  gap: 10px;
 }
 
 .placeholder-screen::before {
@@ -218,6 +222,16 @@ main,
   padding: 6px 10px;
   font-size: 0.8rem;
   color: var(--muted);
+}
+
+.preview-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preview-open {
+  width: fit-content;
 }
 
 .grid-2,
