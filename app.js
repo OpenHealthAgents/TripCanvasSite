@@ -96,7 +96,6 @@ const tripSummaryEl = document.getElementById("trip-summary");
 const modal = document.getElementById("activity-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalDetails = document.getElementById("modal-details");
-const demoSection = document.getElementById("demo");
 
 function setMode(mode) {
   tabs.forEach((tab) => {
@@ -214,19 +213,6 @@ tabs.forEach((tab) => {
 
 document.querySelectorAll("[data-refine]").forEach((button) => {
   button.addEventListener("click", () => applyRefinement(button.dataset.refine));
-});
-
-document.querySelectorAll("[data-preview-mode]").forEach((button) => {
-  button.addEventListener("click", () => {
-    setMode(button.dataset.previewMode);
-    demoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
-});
-
-document.querySelectorAll("[data-open-demo]").forEach((button) => {
-  button.addEventListener("click", () => {
-    demoSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 });
 
 renderAll();

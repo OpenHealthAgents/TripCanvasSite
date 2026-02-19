@@ -58,17 +58,78 @@
         <a class="button" href="#">Add TripCanvas to ChatGPT (Free)</a>
       </div>
       <p class="secondary-link"><a href="#">Works on ChatGPT Web and Mobile. No account required.</a></p>
-      <figure class="visual-placeholder card">
-        <div class="placeholder-screen">
-          <div class="preview-actions">
-            <button class="button button-small" type="button" data-preview-mode="overview">Preview Overview</button>
-            <button class="button button-small button-ghost" type="button" data-preview-mode="itinerary">Preview Map</button>
-            <button class="button button-small button-ghost" type="button" data-preview-mode="hotels">Preview Hotels</button>
-          </div>
-          <button class="button button-small preview-open" type="button" data-open-demo>Open Live Widget</button>
+      <section id="demo" class="demo hero-demo">
+        <div class="demo-header">
+          <h2>Live Demo / Visuals: Show, don't tell</h2>
+          <p>Simulates how a text request turns into a beautiful interactive dashboard instantly.</p>
         </div>
-        <figcaption>Watch a text request turn into a beautiful interactive dashboard instantly.</figcaption>
-      </figure>
+
+        <div class="chat-shell">
+          <div class="chat-turn chat-user">Plan a 3-day trip to Barcelona for April 12 to April 15.</div>
+          <div class="chat-turn chat-ai">Built your trip canvas. You can say "Make it cheaper" or "Swap the museum for a park."</div>
+        </div>
+
+        <div class="controls">
+          <div class="mode-tabs" role="tablist" aria-label="Widget modes">
+            <button class="tab active" data-mode="overview" role="tab" aria-selected="true">Overview Mode</button>
+            <button class="tab" data-mode="itinerary" role="tab" aria-selected="false">Itinerary Mode</button>
+            <button class="tab" data-mode="hotels" role="tab" aria-selected="false">Hotel / Booking Mode</button>
+          </div>
+          <div class="refine-actions">
+            <button class="button button-small" data-refine="cheaper">Make it cheaper</button>
+            <button class="button button-small button-ghost" data-refine="park">Swap museum for a park</button>
+          </div>
+        </div>
+
+        <div class="widget" aria-live="polite">
+          <section class="mode-panel active" id="mode-overview">
+            <div class="overview-grid">
+              <article class="card stat">
+                <p>Destination</p>
+                <h3 id="destination">Barcelona, Spain</h3>
+              </article>
+              <article class="card stat">
+                <p>Dates</p>
+                <h3 id="trip-dates">Apr 12 - Apr 15, 2026</h3>
+              </article>
+              <article class="card stat">
+                <p>Total Est. Cost</p>
+                <h3 id="trip-cost">$1,780</h3>
+              </article>
+            </div>
+            <article class="card summary-card">
+              <h3>Trip Summary</h3>
+              <p id="trip-summary">3-day city culture plan with walkable neighborhoods, curated tapas stops, and oceanfront sunset time.</p>
+            </article>
+          </section>
+
+          <section class="mode-panel" id="mode-itinerary">
+            <div class="itinerary-layout">
+              <div>
+                <h3>Day-by-Day Timeline</h3>
+                <div id="timeline" class="timeline"></div>
+              </div>
+              <aside class="map-panel card">
+                <h3>Map View</h3>
+                <div class="map">
+                  <svg viewBox="0 0 380 240" role="img" aria-label="Trip map with activity pins">
+                    <rect x="0" y="0" width="380" height="240" rx="18" class="map-bg" />
+                    <path d="M20 180 C80 150, 140 210, 220 170 C280 140, 320 160, 360 120" class="map-route" />
+                    <g id="map-pins"></g>
+                  </svg>
+                </div>
+                <ul id="map-legend" class="map-legend"></ul>
+              </aside>
+            </div>
+          </section>
+
+          <section class="mode-panel" id="mode-hotels">
+            <h3>Hotel Carousel</h3>
+            <div id="hotel-carousel" class="hotel-carousel" aria-label="Swipeable list of hotels"></div>
+            <p class="small-note">Tap Book to open each property's booking page in a new tab.</p>
+          </section>
+        </div>
+      </section>
       <div class="hero-strip" role="list" aria-label="Product benefits">
         <span role="listitem">Hotel comparisons with photos and prices</span>
         <span role="listitem">Map pins for each day and each stop</span>
@@ -118,79 +179,6 @@
           <h3>Step 3: Interact</h3>
           <p>Instead of a wall of text, a widget appears. Tap hotels, swipe through days, and explore the map.</p>
         </article>
-      </div>
-    </section>
-
-    <section id="demo" class="demo section">
-      <div class="demo-header">
-        <h2>Live Demo / Visuals: Show, don't tell</h2>
-        <p>Simulates how a text request turns into a beautiful interactive dashboard instantly.</p>
-      </div>
-
-      <div class="chat-shell">
-        <div class="chat-turn chat-user">Plan a 3-day trip to Barcelona for April 12 to April 15.</div>
-        <div class="chat-turn chat-ai">Built your trip canvas. You can say "Make it cheaper" or "Swap the museum for a park."</div>
-      </div>
-
-      <div class="controls">
-        <div class="mode-tabs" role="tablist" aria-label="Widget modes">
-          <button class="tab active" data-mode="overview" role="tab" aria-selected="true">Overview Mode</button>
-          <button class="tab" data-mode="itinerary" role="tab" aria-selected="false">Itinerary Mode</button>
-          <button class="tab" data-mode="hotels" role="tab" aria-selected="false">Hotel / Booking Mode</button>
-        </div>
-        <div class="refine-actions">
-          <button class="button button-small" data-refine="cheaper">Make it cheaper</button>
-          <button class="button button-small button-ghost" data-refine="park">Swap museum for a park</button>
-        </div>
-      </div>
-
-      <div class="widget" aria-live="polite">
-        <section class="mode-panel active" id="mode-overview">
-          <div class="overview-grid">
-            <article class="card stat">
-              <p>Destination</p>
-              <h3 id="destination">Barcelona, Spain</h3>
-            </article>
-            <article class="card stat">
-              <p>Dates</p>
-              <h3 id="trip-dates">Apr 12 - Apr 15, 2026</h3>
-            </article>
-            <article class="card stat">
-              <p>Total Est. Cost</p>
-              <h3 id="trip-cost">$1,780</h3>
-            </article>
-          </div>
-          <article class="card summary-card">
-            <h3>Trip Summary</h3>
-            <p id="trip-summary">3-day city culture plan with walkable neighborhoods, curated tapas stops, and oceanfront sunset time.</p>
-          </article>
-        </section>
-
-        <section class="mode-panel" id="mode-itinerary">
-          <div class="itinerary-layout">
-            <div>
-              <h3>Day-by-Day Timeline</h3>
-              <div id="timeline" class="timeline"></div>
-            </div>
-            <aside class="map-panel card">
-              <h3>Map View</h3>
-              <div class="map">
-                <svg viewBox="0 0 380 240" role="img" aria-label="Trip map with activity pins">
-                  <rect x="0" y="0" width="380" height="240" rx="18" class="map-bg" />
-                  <path d="M20 180 C80 150, 140 210, 220 170 C280 140, 320 160, 360 120" class="map-route" />
-                  <g id="map-pins"></g>
-                </svg>
-              </div>
-              <ul id="map-legend" class="map-legend"></ul>
-            </aside>
-          </div>
-        </section>
-
-        <section class="mode-panel" id="mode-hotels">
-          <h3>Hotel Carousel</h3>
-          <div id="hotel-carousel" class="hotel-carousel" aria-label="Swipeable list of hotels"></div>
-          <p class="small-note">Tap Book to open each property's booking page in a new tab.</p>
-        </section>
       </div>
     </section>
 
