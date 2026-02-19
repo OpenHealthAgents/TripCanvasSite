@@ -44,54 +44,85 @@
 
   <header class="site-header">
     <div class="brand">TripCanvas</div>
-    <a href="#demo" class="button button-ghost">See Interactive Demo</a>
+    <a href="#" class="button button-ghost">Add to ChatGPT</a>
   </header>
 
   <main>
     <section class="hero">
-      <p class="eyebrow">AI-Powered Travel Planning Assistant</p>
-      <h1>From chat prompts to a visual trip dashboard in seconds.</h1>
+      <p class="eyebrow">The Visual Travel Planner for the AI Age</p>
+      <h1>Don't Just Plan Your Trip. See It.</h1>
       <p class="hero-copy">
-        TripCanvas uses the OpenAI Apps SDK to convert plain-text itineraries into interactive maps, day-by-day cards,
-        and hotel comparison carousels directly inside ChatGPT.
+        Transform boring text itineraries into interactive maps, hotel carousels, and visual timelines directly inside ChatGPT.
       </p>
       <div class="hero-actions">
-        <a class="button" href="#demo">Explore Product Walkthrough</a>
+        <a class="button" href="#">Add TripCanvas to ChatGPT (Free)</a>
       </div>
+      <p class="secondary-link"><a href="#">Works on ChatGPT Web and Mobile. No account required.</a></p>
+      <figure class="visual-placeholder card">
+        <div class="placeholder-screen" aria-hidden="true"></div>
+        <figcaption>Watch a text request turn into a beautiful interactive dashboard instantly.</figcaption>
+      </figure>
       <div class="hero-strip" role="list" aria-label="Product benefits">
-        <span role="listitem">Visual planning, not text overload</span>
-        <span role="listitem">Context-aware refinements across turns</span>
-        <span role="listitem">Map + itinerary + booking in one canvas</span>
+        <span role="listitem">Hotel comparisons with photos and prices</span>
+        <span role="listitem">Map pins for each day and each stop</span>
+        <span role="listitem">Instant refinements without losing context</span>
       </div>
     </section>
 
-    <section class="audience section">
-      <h2>Built for the real trip decision-makers</h2>
+    <section class="section">
+      <h2>Text lists are for groceries. Visuals are for travel.</h2>
+      <p class="hero-copy">
+        You've used ChatGPT to plan trips before. It gives you a great list, but then you have to copy-paste hotel names into Google Maps,
+        open 10 tabs to check prices, and struggle to visualize the distance between the museum and the restaurant.
+      </p>
+      <p class="hero-copy"><strong>TripCanvas changes that.</strong> We turn the AI's suggestions into a native, interactive app that lives right in your chat window.</p>
+    </section>
+
+    <section class="section">
+      <h2>Key Features</h2>
       <div class="grid-3">
         <article class="card">
-          <h3>Casual Travelers</h3>
-          <p>Skip research fatigue with visual summaries instead of long suggestion lists.</p>
+          <h3>Compare Hotels Instantly</h3>
+          <p>Stop guessing what a 4-star hotel in Shinjuku looks like. We show a swipeable carousel of top-rated hotels with photos, prices, and direct booking links.</p>
         </article>
         <article class="card">
-          <h3>Visual Planners</h3>
-          <p>Understand logistics quickly by seeing each day and every stop mapped together.</p>
+          <h3>Interactive Itinerary Maps</h3>
+          <p>Understand your trip at a glance. We plot daily activities on a map so you can see exactly where you are going and avoid backtracking.</p>
         </article>
         <article class="card">
-          <h3>Group Organizers</h3>
-          <p>Share one polished, readable plan that helps friends and family align faster.</p>
+          <h3>Dynamic Timelines</h3>
+          <p>Need to swap dinner for a show? Tell ChatGPT and your visual timeline updates instantly without rewriting a single note.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How It Works: 3 Simple Steps</h2>
+      <div class="grid-3 steps">
+        <article class="card">
+          <h3>Step 1: Connect</h3>
+          <p>Enable the TripCanvas extension in your ChatGPT settings. It takes 5 seconds.</p>
+        </article>
+        <article class="card">
+          <h3>Step 2: Chat Naturally</h3>
+          <p>Ask ChatGPT as you normally would: "Plan a 3-day romantic getaway to Paris for under $500."</p>
+        </article>
+        <article class="card">
+          <h3>Step 3: Interact</h3>
+          <p>Instead of a wall of text, a widget appears. Tap hotels, swipe through days, and explore the map.</p>
         </article>
       </div>
     </section>
 
     <section id="demo" class="demo section">
       <div class="demo-header">
-        <h2>Interactive TripCanvas Widget Demo</h2>
-        <p>Simulates how TripCanvas renders inside ChatGPT and updates after refinement commands.</p>
+        <h2>Live Demo / Visuals: Show, don't tell</h2>
+        <p>Simulates how a text request turns into a beautiful interactive dashboard instantly.</p>
       </div>
 
       <div class="chat-shell">
         <div class="chat-turn chat-user">Plan a 3-day trip to Barcelona for April 12 to April 15.</div>
-        <div class="chat-turn chat-ai">Built your trip canvas. You can say “Make it cheaper” or “Swap the museum for a park.”</div>
+        <div class="chat-turn chat-ai">Built your trip canvas. You can say "Make it cheaper" or "Swap the museum for a park."</div>
       </div>
 
       <div class="controls">
@@ -151,36 +182,56 @@
         <section class="mode-panel" id="mode-hotels">
           <h3>Hotel Carousel</h3>
           <div id="hotel-carousel" class="hotel-carousel" aria-label="Swipeable list of hotels"></div>
-          <p class="small-note">Tap Book to open each property’s booking page in a new tab.</p>
+          <p class="small-note">Tap Book to open each property's booking page in a new tab.</p>
         </section>
       </div>
     </section>
 
-    <section class="architecture section">
-      <h2>MCP + Apps SDK Architecture (Implementation Blueprint)</h2>
-      <div class="grid-2">
+    <section class="section">
+      <h2>Use Cases</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>The Weekend Warrior</th>
+              <th>The Group Organizer</th>
+              <th>The Visual Thinker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Need a plan fast? Get a complete visual itinerary for a spontaneous trip in under 30 seconds.</td>
+              <td>Trying to get buy-in? Share screenshots of the TripCanvas dashboard instead of a messy text document.</td>
+              <td>Need to see the vibe? Photos and maps help you decide if a destination is right for you before you book.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="grid-2 faq-grid">
         <article class="card">
-          <h3>Frontend Canvas (Apps SDK)</h3>
-          <ul>
-            <li>Render modes: overview, itinerary, hotel/booking.</li>
-            <li>Support activity cards, map pin interactions, and booking deep links.</li>
-            <li>Accept structured payloads from tool calls and refresh incrementally.</li>
-          </ul>
+          <h3>Q: Is TripCanvas free?</h3>
+          <p>A: Yes. TripCanvas is currently free to use within ChatGPT.</p>
         </article>
         <article class="card">
-          <h3>MCP Server</h3>
-          <ul>
-            <li>Intent parsing for commands like “Plan trip to [city]” and refinements.</li>
-            <li>State store for active trip context (destination, dates, budget, activities).</li>
-            <li>Provider connectors: Amadeus/Google Places (transport/hotels), Yelp/TripAdvisor (activities/food).</li>
-          </ul>
+          <h3>Q: Do I need to leave ChatGPT to use it?</h3>
+          <p>A: No. That's the magic of the OpenAI Apps SDK. The entire visual experience happens inside your chat window.</p>
+        </article>
+        <article class="card">
+          <h3>Q: Does it work on mobile?</h3>
+          <p>A: Absolutely. TripCanvas is responsive and looks great on ChatGPT iOS and Android apps.</p>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>TripCanvas MVP concept for customer-facing validation.</p>
+    <p><strong>TripCanvas</strong> - The Visual Travel Planner for the AI Age.</p>
+    <p class="footer-links"><a href="#">Add to ChatGPT</a> | <a href="mailto:support@tripcanvas.site">Contact Support</a> | <a href="#">Privacy Policy</a></p>
+    <p>Built with the OpenAI Apps SDK.</p>
   </footer>
 
   <dialog id="activity-modal">
