@@ -557,3 +557,7 @@ dialog::backdrop {
     padding-inline: 14px;
   }
 }
+
+.use-case-cards h3 {
+  margin-bottom: 8px;
+}
