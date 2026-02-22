@@ -78,6 +78,8 @@ main,
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
   padding: 24px 0;
 }
 
@@ -85,6 +87,28 @@ main,
   font-family: "Fraunces", serif;
   font-size: 1.45rem;
   letter-spacing: 0.5px;
+}
+
+.site-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  border-bottom-color: var(--ink);
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .section {

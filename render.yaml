@@ -6,5 +6,11 @@ services:
     staticPublishPath: .
     routes:
       - type: rewrite
+        source: /privacy-policy
+        destination: /privacy-policy/index.html
+      - type: rewrite
+        source: /terms-of-service
+        destination: /terms-of-service/index.html
+      - type: rewrite
         source: /*
         destination: /index.html

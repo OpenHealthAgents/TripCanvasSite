@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service | TripCanvas</title>
+  <meta name="description" content="TripCanvas terms of service covering acceptable use, disclaimers, intellectual property, and limitations of liability." />
+  <meta name="robots" content="index,follow" />
+  <meta name="author" content="TripCanvas" />
+  <meta name="theme-color" content="#13756b" />
+  <link rel="canonical" href="https://tripcanvas.site/terms-of-service" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="bg-orb bg-orb-1" aria-hidden="true"></div>
+  <div class="bg-orb bg-orb-2" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="brand">TripCanvas</div>
+    <nav class="site-nav" aria-label="Legal navigation">
+      <a href="/privacy-policy">Privacy</a>
+      <a href="/terms-of-service" aria-current="page">Terms</a>
+    </nav>
+    <a href="/" class="button button-ghost">Back to Home</a>
+  </header>
+
+  <main>
+    <section class="section">
+      <p class="eyebrow">Legal</p>
+      <h1>Terms of Service</h1>
+      <p class="hero-copy">Effective date: February 22, 2026</p>
+      <p class="small-note" id="last-updated">Last updated: February 22, 2026</p>
+    </section>
+
+    <section class="section">
+      <article class="card">
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing or using TripCanvas, you agree to these Terms of Service. If you do not agree, do not use the service.</p>
+        <h2>2. Service Description</h2>
+        <p>TripCanvas provides AI-assisted travel planning and visualization features. Service functionality may change over time.</p>
+        <h2>3. Eligibility and Accounts</h2>
+        <p>You must comply with applicable laws and platform requirements when using TripCanvas. You are responsible for activity under your access credentials.</p>
+        <h2>4. Acceptable Use</h2>
+        <p>You agree not to misuse the service, attempt unauthorized access, interfere with operations, or use TripCanvas for unlawful purposes.</p>
+        <h2>5. Third-Party Content and Links</h2>
+        <p>TripCanvas may display links to third-party services such as hotels and booking providers. We are not responsible for third-party content, pricing, or policies.</p>
+        <h2>6. Intellectual Property</h2>
+        <p>TripCanvas branding, design, and software are owned by TripCanvas or its licensors. You may not copy or distribute protected materials except as permitted by law.</p>
+        <h2>7. Disclaimers</h2>
+        <p>TripCanvas is provided on an "as is" and "as available" basis without warranties of any kind. Travel details, availability, and prices can change rapidly.</p>
+        <h2>8. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, TripCanvas is not liable for indirect, incidental, or consequential damages arising from use of the service.</p>
+        <h2>9. Indemnification</h2>
+        <p>You agree to indemnify and hold TripCanvas harmless from claims arising out of your misuse of the service or violation of these terms.</p>
+        <h2>10. Suspension and Termination</h2>
+        <p>We may suspend or terminate access when necessary to protect users, comply with law, or address abuse or security concerns.</p>
+        <h2>11. Governing Law</h2>
+        <p>These terms are governed by applicable law in the jurisdiction specified by TripCanvas legal notices, without regard to conflict-of-law principles.</p>
+        <h2>12. Changes to Terms</h2>
+        <p>We may update these terms periodically. Continued use after updates means you accept the revised terms.</p>
+        <h2>13. Contact</h2>
+        <p>For questions about these terms, contact <a href="mailto:support@tripcanvas.site">support@tripcanvas.site</a>.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>TripCanvas</strong> - The Visual Travel Planner for the AI Age.</p>
+    <p class="footer-links"><a href="/">Home</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="mailto:support@tripcanvas.site">Contact Support</a></p>
+    <p>Built with the OpenAI Apps SDK.</p>
+  </footer>
+
+  <script>
+    (function updateLastUpdated() {
+      const target = document.getElementById("last-updated");
+      if (!target) return;
+
+      const source = new Date(document.lastModified);
+      if (Number.isNaN(source.getTime())) return;
+
+      const formatted = new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric"
+      }).format(source);
+
+      target.textContent = `Last updated: ${formatted}`;
+    })();
+  </script>
+</body>
+</html>
