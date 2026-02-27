@@ -284,6 +284,21 @@ main,
   margin-bottom: 14px;
 }
 
+.video-embed {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+  margin-bottom: 14px;
+}
+
+.video-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
 .chat-shell {
   background: #fff;
   border: 1px solid var(--line);
