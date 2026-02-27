@@ -289,7 +289,7 @@ main,
   border-radius: 14px;
   overflow: hidden;
   background: #000;
-  margin-bottom: 14px;
+  margin: 12px 0 16px;
 }
 
 .video-embed iframe {
